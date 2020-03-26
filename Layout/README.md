@@ -1,15 +1,15 @@
 ## 实验二：界面布局实验
 
-![](..\image\13.png)
+![](../image/13.png)
 
 线性布局
 
-![](..\image\14.png)
+![](../image/14.png)
 
 ConstraintLayout布局
 
-![](..\image\15.png)
+![](../image/15.png)
 
 表格布局
 
-![](..\image\16.png)
+<img src="../image/16.png" style="zoom:33%;" />
