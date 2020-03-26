@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="RED"
+        android:id="@+id/TextView01"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:gravity="center"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:padding="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:padding="25dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="ORANGE"
+        android:background="@color/orange"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="106dp"
+        android:layout_height="78dp"
+        android:background="#ffff00"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="YELLOW"
+        android:textColor="#000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginRight="36dp"
+        android:background="#0f0"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="GREEN"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/TextView05"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:text="BLUE"
+        android:id="@+id/TextView05"
+        android:background="@color/blue"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="32dp"
+        android:background="#4b0082"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="INDIGO"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/TextView05"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ee82ee"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="VIOLET"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

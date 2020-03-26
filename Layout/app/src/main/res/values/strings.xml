@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LayoutTutorial</string>
+    <string name="linearlayout">线性布局演示</string>
+    <string name="constrainlayout">约束布局演示</string>
+    <string name="tablelayout">表格布局演示</string>
+</resources>
