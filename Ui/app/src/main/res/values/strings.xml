@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ui</string>
+    <string name="action_settings">Settings</string>
+    <string name="custom_dialog_tutorial">自定义对话框</string>
+    <string name="signin">Sign in</string>
+    <string name="cancel">Cancel</string>
+    <string name="simple_adapter_demo">SimpleAdapter</string>
+    <string name="custom_dialog_demo">CustomDialog</string>
+    <string name="xml_menu_demo">XmlMenu</string>
+    <string name="action_context_demo">ActionModeContext</string>
+    <string name="process_bar_demo">ProgressBar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="menu_Font">字体大小</string>
+    <string name="menu_Normal">普通菜单项</string>
+    <string name="menu_Color">字体颜色</string>
+    <string name="menu_font_small">小号</string>
+    <string name="menu_font_middle">中号</string>
+    <string name="menu_font_big">大号</string>
+    <string name="menu_color_red">红色</string>
+    <string name="menu_color_black">黑色</string>
+    <string name="tv_test">用于测试的文本</string>
+    <string name="tv_process_bar">Loading...</string>
+</resources>
