@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="edit_url_hint">请输入链接</string>
+    <string name="btn_browse">浏览该网页</string>
+</resources>
