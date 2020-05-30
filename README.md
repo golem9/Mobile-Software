@@ -12,6 +12,11 @@
 
 [实验3：**Android UI**  组件 ](./Ui/README.md)
 
-### 实验三
+### 实验四
 
 [实验4：intent](./intent/README.md)
+
+### 期中实验
+
+[期中实验:NotePad**笔记本应用**](./NotePad/README.md)
+
