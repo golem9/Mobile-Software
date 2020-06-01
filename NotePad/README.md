@@ -2,27 +2,9 @@
 
 #### 一：时间戳显示
 
-1.NoteList中显示条目增加时间戳显示修改noteslist_item.xml中的样式，增加要显示时间戳的TextView。**
+##### 1.修改layout文件中的noteslist_item.xml增加要时间戳的TextView。
 
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@android:id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="center_vertical"
-        android:paddingLeft="5dip"
-        android:textColor="@color/colorPrimaryDark"
-        android:singleLine="true"
-        android:textSize="25dp"
-        />
-    <!--添加 显示时间 的TextView-->
     <TextView
         android:id="@+id/times"
         android:layout_width="match_parent"
@@ -30,19 +12,16 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:paddingLeft="5dip"
         android:textColor="@color/OrangeRed"
-        android:textSize="15dp"/>d
-
-</LinearLayout>
+        android:textSize="15dp"/>
 ```
 
-##### 2.NotesList.java PROJECTION 契约类的变量值加一列，显示时间。
+##### 2.java文件中的NoteEditor.java中的updatanote（）函数中改动时间戳格式。
 
 ```
-private static final String[] PROJECTION = new String[] {
-            NotePad.Notes._ID, 
-            NotePad.Notes.COLUMN_NAME_TITLE,
-            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, //  时间
-    };
+        Date date = new Date(now);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        String dateTime = format.format(date);
+        values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime)
 ```
 
 ##### 3.修改SimpleCursorAdapter的dataColumns和viewIDs的相关值。
@@ -52,16 +31,17 @@ private static final String[] PROJECTION = new String[] {
     private int[] viewIDs = { android.R.id.text1 , R.id.times };
 ```
 
-##### 4.NotePadProvider和NoteEditor中改动时间戳格式。
+##### 4.NotesList.java 中PROJECTION 契约类的变量值加一列，显示时间。
 
 ```
-		//修改时间
-        Long now = Long.valueOf(System.currentTimeMillis());
-        Date date = new Date(now);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-        String dateTime = format.format(date);
-        values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime)
+		private static final String[] PROJECTION = new String[] {
+            NotePad.Notes._ID, 
+            NotePad.Notes.COLUMN_NAME_TITLE,
+            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, //  时间
+    };
 ```
+
+#### 时间戳
 
 ![1590846088909](../image/26.png)
 
@@ -80,8 +60,6 @@ private static final String[] PROJECTION = new String[] {
 
 
 
-#### ![1590846170468](../image/27.png)
-
 ##### 2.onOptionsItemSelected中在switch中添加搜索的case语句
 
 ```
@@ -93,9 +71,7 @@ private static final String[] PROJECTION = new String[] {
                 return true;
 ```
 
-##### 3.新建一个activity用来跳转的搜索界面
-
-note_search_list.xml
+##### 3.搜索界面布局：新建一个note_search_list.xml
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -121,7 +97,7 @@ note_search_list.xml
 </LinearLayout>
 ```
 
-NoteSearch.java
+##### 4.新建NoteSearch.java用来跳转以显示搜索界面的内容和功能
 
 ```
 package com.example.mynotepad;
@@ -215,37 +191,9 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
     }
 ```
 
-### 
+#### 查询界面
 
-三、笔记界面
-
-```
-<LinearLayout 
-xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="wrap_content"     
-android:layout_height="wrap_content"    
-android:orientation="vertical"    
-android:paddingLeft="6dip"    
-android:paddingRight="6dip"    
-android:paddingBottom="3dip"    
-android:background="@color/colorBlue">                         
-<EditText android:id="@+id/title"         
-android:maxLines="1"         
-android:layout_marginTop="2dp"        
-android:layout_marginBottom="15dp"        
-android:layout_width="wrap_content"       
-android:ems="25"        
-android:layout_height="wrap_content"         
-android:autoText="true"        
-android:capitalize="sentences"        
-android:scrollHorizontally="true"        android:background="@color/colorBlue"/>    
-<Button android:id="@+id/ok"        
-android:layout_width="wrap_content"         android:layout_height="wrap_content"         
-android:layout_gravity="right"        
-android:text="@string/button_ok"        
-android:onClick="onClickOk"        /></LinearLayout>
-```
+![1590846170468](../image/27.png)
 
 
-
-![1590934979658](../image/28.png)
 
